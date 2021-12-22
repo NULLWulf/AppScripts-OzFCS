@@ -54,9 +54,10 @@ function mergeAndParse() {
     for (let row = rowsInSheet ; row > 0 ; row --)
     {   
 
+      // merges column 2 and 3 together to form key value for MCOR map
       let t_Device = getValasStringTrim(tempActiveSheet, row, 2);
       let t_Device2 = getValasStringTrim(tempActiveSheet, row, 3);
-      let t_concatDevice = t_Device + ":" + t_Device2;  // merges column 2 and 3 together to form key value for MCOR map
+      let t_concatDevice = t_Device + ":" + t_Device2;  
 
       if(_DEVICEKeys.has(t_concatDevice))
       {
@@ -74,13 +75,13 @@ function mergeAndParse() {
       let addedRange = [getRndInteger(1000000000, 9999999999), t_Address_wDescription, t_Description, 28230, "MAIN CAMPUS", t_Property, t_Location, "LIFE SAFETY", "FIRE DETECTION-ALARM"];
 
       // Appends defined added range 
-      Logger.log(row + "/" + rowsInSheet + " KeyPair Found: Row Processed");
+      Logger.log(row + "/" + rowsInSheet + " KeyPair Found: Row Processed: " + t_concatDevice);
       assetListSheet.appendRow(addedRange);
 
       // Deletes currently referenced row 
       tempActiveSheet.deleteRow(row);
       } else{
-        Logger.log(row + "/" + rowsInSheet + " KeyPair NaN: Row Omitted");
+        Logger.log(row + "/" + rowsInSheet + " KeyPair NaN: Row Omitted. Urecognize KeyPair: " + t_Device + ":" + t_Device2);
       }
     }
   }
