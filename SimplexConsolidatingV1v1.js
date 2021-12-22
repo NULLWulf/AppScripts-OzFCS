@@ -53,7 +53,6 @@ function mergeAndParse() {
     
     for (let row = rowsInSheet ; row > 0 ; row --)
     {   
-      Logger.log(row + "/" + rowsInSheet);
 
       let t_Device = getValasStringTrim(tempActiveSheet, row, 2);
       let t_Device2 = getValasStringTrim(tempActiveSheet, row, 3);
@@ -75,10 +74,13 @@ function mergeAndParse() {
       let addedRange = [getRndInteger(1000000000, 9999999999), t_Address_wDescription, t_Description, 28230, "MAIN CAMPUS", t_Property, t_Location, "LIFE SAFETY", "FIRE DETECTION-ALARM"];
 
       // Appends defined added range 
+      Logger.log(row + "/" + rowsInSheet);
       assetListSheet.appendRow(addedRange);
 
       // Deletes currently referenced row 
       tempActiveSheet.deleteRow(row);
+      } else{
+        Logger.log(row + "/" + rowsInSheet + " KeyPair NaN: Row Omitted");
       }
     }
   }
