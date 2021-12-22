@@ -74,7 +74,7 @@ function mergeAndParse() {
       let addedRange = [getRndInteger(1000000000, 9999999999), t_Address_wDescription, t_Description, 28230, "MAIN CAMPUS", t_Property, t_Location, "LIFE SAFETY", "FIRE DETECTION-ALARM"];
 
       // Appends defined added range 
-      Logger.log(row + "/" + rowsInSheet);
+      Logger.log(row + "/" + rowsInSheet + " KeyPair Found: Row Processed");
       assetListSheet.appendRow(addedRange);
 
       // Deletes currently referenced row 
