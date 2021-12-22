@@ -34,7 +34,7 @@ function mergeAndParse() {
 
   Logger.log("Before sheet loop");
 
-  for (let i = 2; i < numberOfSheets ; i ++){  // starts at one otherwise starts at 'master list sheet which
+  for (let i = 1; i < numberOfSheets ; i ++){  // starts at one otherwise starts at 'master list sheet which
     // is usuaully ones, otherwise first sheet is '0' as expected 
 
     // Activates Data Related Sheets
