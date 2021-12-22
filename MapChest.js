@@ -1,23 +1,23 @@
-export const _DEVICEKeys = new Map([  // Map to check for device keys and assign them description
-    ["ADRPUL:PULL", "Pull Station"], 
-    ["COMBO:UTILITY", "Detector Photo Smoke/Heat/Gas"],
-    ["GENIAM:SO", "Shut Off Valve"], 
-    ["GENIAM:WATER", "Flow Switch"],
-    ["HEAT DETECTOR:HEAT DETECTOR", "Detector Heat"], 
-    ["HEAT DETECTOR:HEAT DETECTOR DETECTOR", "Detector Heat"],
-    ["IAM:SO", "Shut Off Valve"], 
-    ["IAM:WATER", "Flow Switch"],
-    ["IAM:HEAT DETECTOR", "Detector Heat"],
-    ["IAM:WSO", "Shut Off Valve/Flow Switch"],
-    ["ICOMBO:UTILITY", "Detector Photo Smoke/Gas w/Isolator"], 
-    ["IHEAT:DETECTOR HEAT DETECTOR", "Detector Heat"],
-    ["MCOH:UTILITY", "Detector Heat/Gas"],
-    ["MCOP:UTILITY", "Detector Photo Smoke/Gas"], 
-    ["MCOPS:UTILITY", "Detector Photo Smoke/Gas w/Signal"], 
-    ["PHOTO:SMOKE DETECTOR", "Detector Photo Smoke"], 
-    ["PHOTO:DUCT", "Detector Duct Photo Smoke"], 
-    ["RPHOTO:DUCT", "Detector Duct Photo Smoke"]
-      ]);
+// export const _DEVICEKeys = new Map([  // Map to check for device keys and assign them description
+//     ["ADRPUL:PULL", "Pull Station"], 
+//     ["COMBO:UTILITY", "Detector Photo Smoke/Heat/Gas"],
+//     ["GENIAM:SO", "Shut Off Valve"], 
+//     ["GENIAM:WATER", "Flow Switch"],
+//     ["HEAT DETECTOR:HEAT DETECTOR", "Detector Heat"], 
+//     ["HEAT DETECTOR:HEAT DETECTOR DETECTOR", "Detector Heat"],
+//     ["IAM:SO", "Shut Off Valve"], 
+//     ["IAM:WATER", "Flow Switch"],
+//     ["IAM:HEAT DETECTOR", "Detector Heat"],
+//     ["IAM:WSO", "Shut Off Valve/Flow Switch"],
+//     ["ICOMBO:UTILITY", "Detector Photo Smoke/Gas w/Isolator"], 
+//     ["IHEAT:DETECTOR HEAT DETECTOR", "Detector Heat"],
+//     ["MCOH:UTILITY", "Detector Heat/Gas"],
+//     ["MCOP:UTILITY", "Detector Photo Smoke/Gas"], 
+//     ["MCOPS:UTILITY", "Detector Photo Smoke/Gas w/Signal"], 
+//     ["PHOTO:SMOKE DETECTOR", "Detector Photo Smoke"], 
+//     ["PHOTO:DUCT", "Detector Duct Photo Smoke"], 
+//     ["RPHOTO:DUCT", "Detector Duct Photo Smoke"]
+//       ]);
 
 //   const _ONON_RETRO_KEYS = new Map([  // Map to check for device keys and assign them description
 //       ["ADRPUL   PULL", "Pull Station"], 

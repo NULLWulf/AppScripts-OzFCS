@@ -1,4 +1,4 @@
-// import ('_DEVICEKeys') as someMap from './MapChest.js';
+// import (_DEVICEKeys) as someMap from './MapChest.js';
 
 function mergeAndParse() {
   const _DEVICEKeys = new Map([  // Map to check for device keys and assign them description
