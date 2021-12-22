@@ -52,37 +52,35 @@ function mergeAndParse() {
       Logger.log("Sheet name" + tempActiveSheet);
     
     for (let row = rowsInSheet ; row > 0 ; row --)
-       {   
-        Logger.log(row + "/" + rowsInSheet);
+    {   
+      Logger.log(row + "/" + rowsInSheet);
 
-      let t_Address = getValasStringTrim(tempActiveSheet, row, 1);
       let t_Device = getValasStringTrim(tempActiveSheet, row, 2);
       let t_Device2 = getValasStringTrim(tempActiveSheet, row, 3);
+      let t_concatDevice = t_Device + ":" + t_Device2;  // merges column 2 and 3 together to form key value for MCOR map
+
+      if(_DEVICEKeys.has(t_concatDevice))
+      {
+
+      let t_Address = getValasStringTrim(tempActiveSheet, row, 1);
       let t_Description = getValasStringTrim(tempActiveSheet, row, 4);
       let t_Location = getValasStringTrim(tempActiveSheet, row, 5);
       let t_Property = getValasStringTrim(tempActiveSheet, row, 6);
-
-      let t_concatDevice = t_Device + ":" + t_Device2;  // merges column 2 and 3 together to form key value for MCOR map
-    
+      
       // Holds FACP with Description value 
       let t_Address_wDescription = "";
-
-      if(_DEVICEKeys.has(t_concatDevice)){
       t_Address_wDescription = t_Address + " " + _DEVICEKeys.get(t_concatDevice);
-
-      }
-      else{
-      t_Address_wDescription = null; // sets to null to skip lines without a descrption (may contain superflous entry data in other columns)
-      }
  
-    let addedRange = [getRndInteger(1000000000, 9999999999), t_Address_wDescription, t_Description, 28230, "MAIN CAMPUS", t_Property, t_Location, "LIFE SAFETY", "FIRE DETECTION-ALARM"];
-    
-    if(t_Address_wDescription != null)
-      {
-      assetListSheet.appendRow(addedRange); 
-      }
+      // Defines array to push onto main list 
+      let addedRange = [getRndInteger(1000000000, 9999999999), t_Address_wDescription, t_Description, 28230, "MAIN CAMPUS", t_Property, t_Location, "LIFE SAFETY", "FIRE DETECTION-ALARM"];
+
+      // Appends defined added range 
+      assetListSheet.appendRow(addedRange);
+
+      // Deletes currently referenced row 
       tempActiveSheet.deleteRow(row);
       }
+    }
   }
 }
 
