@@ -99,7 +99,9 @@ function mergeAndParse() {
     tempActiveSheet.setTabColor("#ff0000"); 
     }
     else{
-      tempActiveSheet.setTabColor("#ffff00"); // Sets color to yellow to indicate it was ignored during a script run
+      if(!tempActiveSheet.getTabColor("#ff0000")){  // checks to make sure tab is not red, red indicate it was completed on another run
+        tempActiveSheet.setTabColor("#ffff00"); // Sets color to yellow to indicate it was ignored during a script run
+      }
     }
   }
 }
