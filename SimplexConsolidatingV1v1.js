@@ -1,7 +1,7 @@
 // import (_DEVICEKeys) as someMap from './MapChest.js';
 
 function mergeAndParse() {
-
+  // Maps have been modularized into MapChest.JS.  Not neccesary to export (or possible) with GAS
   let app = SpreadsheetApp;  // Gets Google Sheets Applicaion 
   let currentSpreadsheetFile = app.getActiveSpreadsheet();  // Gets Active Spreadssheet - not technicall neccesary
   // if running script within spreadsheet otherwise would reference spreadsheet uri directly 
