@@ -51,6 +51,8 @@ function mergeAndParse() {
     tempActiveSheet.activate();  // not techicall neccesary but activate the current sheet in question (brings it into view on the user's screen)
     Logger.log(tempActiveSheet.getName());  // simply gets the currently worked on sheets names 
 
+    // Gets tab color for GREEN which indicates the tab is ready to pasrse through it 
+    if(tempActiveSheet.getTabColor() == "#00ff00"){
     rowsInSheet = tempActiveSheet.getLastRow();
     Logger.log("Current # Values in AssetList: " + rowsInSheet);  // Outputs total rows in sheet that contain data, bear in mind will
       // look for data until are columns and rows are empty 
@@ -92,6 +94,9 @@ function mergeAndParse() {
       } else{
         Logger.log(row + "/" + rowsInSheet + " KeyPair NaN: Row Omitted. Urecognize KeyPair: " + t_Device + ":" + t_Device2);
       }
+    }
+    // Sets tab color to RED to indicate it's been parsed through, however unidentified values will remain
+    tempActiveSheet.setTabColor("#ff0000"); 
     }
   }
 }
