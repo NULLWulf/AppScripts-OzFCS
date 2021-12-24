@@ -73,7 +73,7 @@ function mergeAndParse() {
       // Deletes currently referenced row 
       tempActiveSheet.deleteRow(row);
       } else{
-        Logger.log(row + "/" + rowsInSheet + " KeyPair NaN: Row Omitted. Urecognize KeyPair: " + t_Device + ":" + t_Device2);
+        Logger.log(row + "/" + rowsInSheet + " KeyPair NaN: Row Omitted. Urecognized KeyPair: " + t_Device + ":" + t_Device2);
       }
     }
     // Sets tab color to RED to indicate it's been parsed through, however unidentified values will remain
