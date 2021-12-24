@@ -58,3 +58,19 @@ function convertFACPRegexToColumn() {  // simplies copies value from one to call
 
   return 0;
 }
+
+function regexMacorSplit(){
+  var app = SpreadsheetApp;  // Gets Google Sheets App
+  var thisSpreadSheet = app.getActiveSpreadsheet();  // Gets Active Spreadssheet 
+
+  var main = thisSpreadSheet.getSheets()[1];  // gets an array with the index referencencing the respective sheets
+
+  rowTotal = main.getLastRow();
+  console.log(rowTotal);
+
+  for(let i = 0; i < rowTotal; i++){
+    Logger.log("Test");
+  }
+
+  return 0;
+}
