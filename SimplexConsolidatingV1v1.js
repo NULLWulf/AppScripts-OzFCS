@@ -98,6 +98,9 @@ function mergeAndParse() {
     // Sets tab color to RED to indicate it's been parsed through, however unidentified values will remain
     tempActiveSheet.setTabColor("#ff0000"); 
     }
+    else{
+      tempActiveSheet.setTabColor("#ffff00"); // Sets color to yellow to indicate it was ignored during a script run
+    }
   }
 }
 
