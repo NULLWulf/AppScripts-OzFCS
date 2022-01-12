@@ -10,7 +10,7 @@ function mergeAndParse() {
   let sheets = currentSpreadsheetFile.getSheets();  // gets an array with the index referencencing the respective sheets
   let assetListSheet = currentSpreadsheetFile.getSheets()[0]; // sets the first of assetlist to assetList sheet letiable 
   let assetRows = assetListSheet.getLastRow();
-  console.log(assetRows);
+  Logger.log(assetRows);
   
   // assetListSheet.clear();  // using mostly for testing - removed when doing progressively runnig scripts 
 

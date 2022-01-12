@@ -5,7 +5,7 @@ function pullMiddleDescription() {  // contains only everything between 13 and 5
   var main = thisSpreadSheet.getSheets()[1];  // gets an array with the index referencencing the respective sheets
 
   rowTotal = main.getLastRow();
-  console.log(rowTotal);
+  Logger.log(rowTotal);
 
   for(let i = 2; i < rowTotal; i++){
         let cellPreParseValue = main.getRange(i, 1).getValue();
@@ -25,7 +25,7 @@ function pullLastPart() {  // Omits everything before 54 position in cell string
   var main = thisSpreadSheet.getSheets()[1];  // gets an array with the index referencencing the respective sheets
 
   rowTotal = main.getLastRow();
-  console.log(rowTotal);
+  Logger.log(rowTotal);
 
   for(let i = 2; i < rowTotal; i++){
         let cellPreParseValue = main.getRange(i, 1).getValue();
@@ -46,7 +46,7 @@ function convertFACPRegexToColumn() {  // simplies copies value from one to call
   var main = thisSpreadSheet.getSheets()[1];  // gets an array with the index referencencing the respective sheets
 
   rowTotal = main.getLastRow();
-  console.log(rowTotal);
+  Logger.log(rowTotal);
 
   for(let i = 2; i < rowTotal; i++){
         let cellPreParseValue = main.getRange(i, 4).getValue();
@@ -66,7 +66,7 @@ function regexMacorSplit(){
   var main = thisSpreadSheet.getSheets()[1];  // gets an array with the index referencencing the respective sheets
 
   rowTotal = main.getLastRow();
-  console.log(rowTotal);
+  Logger.log(rowTotal);
 
   for(let i = 0; i < rowTotal; i++){
     Logger.log("Test");
